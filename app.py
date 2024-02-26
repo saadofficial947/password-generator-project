@@ -14,9 +14,9 @@ def generate_random_password(characters,password_length=6):
 
 
     #cost
-ALL_CHARACTERS_PATTERN = list('str'.ascii_letters + 'str'.digits + "!@#$%^&*()_+=-")
-ALPHANUMERIC_PATTERN = list('str'.ascii_letters + 'str' + 'str'.digits)
-ALPHABETS_PATTERN = list('str'.ascii_letters) 
+ALL_CHARACTERS_PATTERN = list('str.ascii_letters' + 'str.digits' + "!@#$%^&*()_+=-")
+ALPHANUMERIC_PATTERN = list('str.ascii_letters' + 'str' + 'str.digits')
+ALPHABETS_PATTERN = list('str.ascii_letters') 
 NATOPHONETICS_DICTIONARY = {"A":"Alpha", "B":"Bravo", "C":"Charlie", "D":"Delta", "E": "Echo","F":"Foxtrot"}
     
 def get_natophonetics(term):
