@@ -12,14 +12,21 @@ def generate_random_password(characters, password_length=6):
 
     return "".join(password)
 
-# corrected character patterns
+# Corrected character patterns
 ALL_CHARACTERS_PATTERN = list(string.ascii_letters + string.digits + "!@#$%^&*()_+=-")
 ALPHANUMERIC_PATTERN = list(string.ascii_letters + string.digits)
 ALPHABETS_PATTERN = list(string.ascii_letters)
 NATOPHONETICS_DICTIONARY = {"A": "Alpha", "B": "Bravo", "C": "Charlie", "D": "Delta", "E": "Echo", "F": "Foxtrot"}
 
+# Updated get_natophonetics function
 def get_natophonetics(term):
-    result = ''.join([NATOPHONETICS_DICTIONARY.get(i) for i in list(term.upper())])
+    result = ''
+    for i in list(term.upper()):
+        if i in NATOPHONETICS_DICTIONARY:
+            result += NATOPHONETICS_DICTIONARY[i]
+        else:
+            print(f"Character '{i}' not found in NATOPHONETICS_DICTIONARY.")
+            result += i
     return result
 
 def main():
